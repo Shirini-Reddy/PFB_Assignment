@@ -1,0 +1,751 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.Header {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Fixed height for the header */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text horizontally within container */
+}
+
+
+
+.Header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* Ensure the image is positioned behind other content */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the image is behind the text and overlay */
+}
+
+.Header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 30% black overlay */
+    z-index: 2; /* Ensure the overlay is above the image but behind the text */
+}
+
+.Header-content {
+    position: relative; /* Ensure proper stacking above image and overlay */
+    z-index: 2; /* Ensure the content is above the image and overlay */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.Body-text{
+    color: #FFFFFF; /* White color for the text */
+    align-items: center;
+}
+
+.Header-text {
+    color: #FFFFFF; /* White color for the text */
+    align-items: center;
+}
+
+.Header-text h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0; /* Remove default margins */
+}
+
+.Header-text h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 22px; /* Adjust size as needed */
+    margin: 10px 0 0; /* Space between heading and secondary text */
+}
+
+.Small-image-container {
+    width: 220px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    background-color: #FFFFFF; /* White background */
+    margin: 20px 0; /* Space between the text and small image */
+    background-size: cover; /* Cover the container with the image */
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+   
+}
+
+.Small-image-container h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px; /* Adjust size as needed */
+    text-align: center; /* Center text horizontally within container */
+    margin: 0; /* Remove default margins */
+   
+}
+
+.nav-container {
+    position: absolute;
+    top: 20px; /* Adjust this value to position vertically */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    z-index: 2; /* Ensure it's above other elements */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Adjust gap between items (nav and icon) */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between nav items */
+    margin-right: 50px; 
+    margin-left: 200px;
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+nav li {
+    display: inline; /* Ensure list items are displayed inline */
+    color: #FFFFFF;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #FFFFFF; /* White color for the links */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px; /* Adjust size as needed */
+    cursor: pointer; /* Hand cursor for links */
+    white-space: nowrap;
+}
+
+.icon-container {
+    color: #FFFFFF; /* Color for the icon */
+    margin-right: 23px; /* Space between icon and empty image */
+}
+
+.empty-image-container {
+    width: 250px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    background-color: #000; /* Black background */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+.image-cont{
+    width: 250px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    background-color: #000; /* Black background */
+    z-index: 6;
+}
+
+.empty-image-container h1 {
+    color: #FFFFFF;
+    font-family: 'Sanista', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+
+.icon-container .fa-icon {
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+.social-media-container {
+    position: absolute;
+    bottom: 0;
+    right: 140px;
+    display: flex;
+    gap: 50px; /* Adjust gap between social icons */
+    z-index: 2;
+}
+@import url('https://fonts.googleapis.com/css2?family=Europa:wght@400;700&display=swap'); /* Adjust URL based on where you get Europa font */
+
+.image-caption {
+    font-family: 'Europa', sans-serif; /* Use Europa font */
+    font-weight: bold;
+    font-size: 25px; /* Adjust font size as needed */
+    color: #000; /* Set text color */
+    margin-top: 10px; /* Space between image and text */
+    text-align:left; /* Center the text */
+}
+
+.social-icon {
+    width: 18px; /* Adjust the size as needed */
+    height: 36px; /* Adjust the size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the icons fit within the container */
+}
+
+.social-text {
+    margin-left: 10px; /* Space between icon and text */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+
+.image-wrapper {
+    position: relative;
+    text-align: left; /* Align text to the left within the container */
+  }
+  
+  .image-caption {
+    margin-bottom: 10px; /* Space between image and caption */
+  }
+  
+  .caption-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space between image and caption container */
+  }
+ 
+  .eclipse-image {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 0px; /* Space between Eclipse and text */
+  }
+  
+  .details-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-left: 10px; /* Space between Eclipse and details */
+  }
+  
+  .details-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; /* Space between items */
+  }
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+    font-family: 'Europa', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.card-footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+    padding: 0; /* Remove default padding for the paragraph */
+}
+  .details-item h1 {
+    margin: 0; /* Remove default margins */
+    font-family: 'Europa', sans-serif; /* Ensure text uses the Europa font */
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .details-item h2{
+    margin: 0; /* Remove default margins */
+    font-family: 'Europa', sans-serif; /* Ensure text uses the Europa font */
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .post-description{
+    font-family: 'Europa', sans-serif; /* Ensure text uses the Europa font */
+    font-size: 12px;
+    font-weight: normal;
+    color:#6C757D ;
+    margin: 15px;
+  }
+  
+  .share-icon {
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 5px; /* Space between share icon and text */
+  }
+  
+  @media (max-width: 768px) {
+    .caption-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    .details-container {
+      flex-direction: column; /* Stack details vertically on smaller screens */
+    }
+  }
+  .overlay-image {
+    position: absolute;
+    top: 20px; /* Space from the top */
+    left: 20px; /* Space from the left */
+    width: 130px;
+    height: 30px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px; /* Space between overlays and image */
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text inside the overlay */
+    z-index: 3; /* Ensure the overlay is above the main image */
+  }
+ 
+  .overlay-image2 {
+    position: absolute;
+    top: 20px; /* Space from the top */
+    left:160px;
+    margin-right: 10px; /* Space between overlays and image */
+    width: 50pxpx;
+    height: 30px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text inside the overlay */
+    z-index: 3; /* Ensure the overlay is above the main image */
+  }
+  
+  .image-container {
+    position: relative; /* Create a positioning context for the overlay */
+  }
+  
+  .img-fluid {
+    display: block; /* Remove extra space below the image */
+    width: 100%; /* Ensure the image fits its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+ 
+
+  .overlay-image,.overlay-image2 span{
+    color: white;
+    font-family: 'Europa', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  .Top-imagesection img {
+     width: 42px; /* Ensure image scales responsively */
+    height: 42px; /* Maintain aspect ratio */
+    top: 17px;
+    left: 300px;
+    position: absolute;
+    filter: opacity(70%); /* Set the opacity of the image to 20% */
+   
+
+  }
+  .Top-imagesection {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+  }
+  .position-relative {
+    position: relative;
+  }
+  
+  .overlay-container {
+    position: absolute; /* Positioned relative to the .position-relative parent */
+    top: 10px; /* Align to the top of the parent */
+    left: 10px; /* Align to the left of the parent */
+    right: 10px; /* Stretch to the right of the parent */
+    display: flex; /* Arrange child elements side by side */
+    z-index: 10; /* Ensure overlays are on top */
+    width: 10px;
+    gap: 10px;
+  }
+  .overlay-top,.overlay-bottom{
+    background:rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around the text */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    flex: 1; /* Allows overlays to take equal width */
+    text-align: center; /* Center text horizontally */
+    text-wrap: nowrap;
+ 
+  }
+
+  .overlay-black {
+    position: absolute; /* Positioned relative to the .position-relative parent */
+    top: 0; /* Align to the top of the parent */
+    left: 0; /* Align to the left of the parent */
+    right: 0; /* Stretch to the right of the parent */
+    bottom: 0; /* Stretch to the bottom of the parent */
+    background: rgba(0, 0, 0, 0.25); /* Black background with 25% opacity */
+    z-index: 1; /* Ensure the overlay is above the image but below any text or other content */
+  }
+  .view-post-heading {
+    font-family: 'Europa', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    border-bottom: 2px solid black; /* Thin black border line */
+    padding-bottom: 5px; /* Space between text and border line */
+    margin-bottom: 10px; /* Space between the border line and any content below */
+    display: inline; /* Ensures the border spans only the width of the text */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+.btn-load-more {
+    border: 1px solid black; /* 1px black border */
+    padding: 10px 20px; /* Padding for button size */
+    font-family: 'Europa', sans-serif; /* Font family */
+    font-weight: bold; /* Font weight */
+    font-size: 16px; /* Font size */
+    color: black; /* Text color */
+    background-color: white; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+  }
+
+.btn-load-more:hover {
+    background-color: black; /* Background color on hover */
+    color: white; /* Text color on hover */
+    border-color: black; /* Border color on hover */
+  }
+  .body {
+    position: relative;
+    width: 100%;
+    height: auto; /* Fixed height for the header */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+   
+  }
+  .image-Gallery h1{
+    font-family: Europa, sans-serif; /* Consistent font family */
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 500px;
+  }
+  .image-Gallery h5{
+    font-family: Europa, sans-serif; /* Consistent font family */
+    font-weight: bold;
+    font-size: 13px;
+    color: #000;
+  }
+ 
+  .image-container {
+    position: relative; /* This makes it the reference point for absolute positioning */
+    margin-top: 30px;
+  }
+  
+  .image-container img {
+    width: 1100px; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove default inline space */
+    
+    
+  }
+  .image-item {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    max-width: 200px; /* Adjust max-width to control image size */
+  }
+  
+  
+  .Body-content {
+    position: absolute; /* Position the content absolutely within the container */
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding if needed */
+    z-index: 2;
+    flex-direction: column;
+  }
+  
+  .Body-text h1, .Body-text h5 {
+    margin: 0;
+    padding: 0;
+    font-family: Europa, sans-serif; /* Consistent font family */
+    font-weight: bold;
+   color: white;
+  }
+  
+  .Body-text h1 {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Ensure the text is bold */   
+  }
+  
+  
+  .Body-text h5 {
+    font-size: 14px; /* Adjust size as needed */
+    margin-top: 20px;
+    font-weight: normal;
+    margin-left: 210px;
+    overflow-wrap: break-word;
+    max-width: 60%;
+  }
+  .gallery-container {
+    margin-top: 10px;
+    padding: 50px;
+  }
+  
+  .gallery-container h1 {
+    font-family: Europa, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .gallery-container h5 {
+    font-family: Europa, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+}
+ 
+  .image-item {
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* Black color with 25% opacity */
+    pointer-events: none; /* Ensure overlay doesn't block interactions */
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the container takes up at least the full height of the viewport */
+
+  }
+  .image-item p {
+    position: absolute;
+    bottom: 70px; /* Distance from the bottom edge */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    padding: 5px; /* Adjust as needed */
+    border-radius: 3px; /* Optional: rounds the corners */
+    text-align: center; /* Centers the text horizontally */
+    z-index: 1;
+    text-wrap: nowrap;
+  }
+  .category-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    margin-bottom: 20px;
+    margin-right: 330px;
+  }
+  
+  .category-item {
+    position: relative;
+    margin-right: 20px; /* Space between categories */
+    padding: 10px; /* Add padding for better spacing */
+    cursor: pointer; /* Indicate that items are clickable */
+    border-bottom: 2px solid transparent; /* Default border, hidden by default */
+  }
+  
+  .category-item h2 {
+    font-size: 12px;
+    margin: 0;
+    color: #000; /* Default text color */
+  }
+  
+  .category-item.active {
+    border-color: #000; /* Color of the border for the active category */
+  }
+
+  .postviews-container {
+    display: flex;
+    justify-content: center; /* Center the box horizontally */
+    align-items: center; /* Center the box vertically if needed */
+    padding: 30px; /* Add padding around the container */
+    gap: 20px;
+  }
+  
+  .box, .box2 {
+    box-sizing: border-box; /* Include border and padding in the element's total width and height */
+    border: 1px solid #121416; /* Border color */
+  }
+  
+  .box {
+    width: 700px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    display: flex; /* Use flexbox to align contents */
+    flex-direction: row; /* Arrange children horizontally */
+    margin: 0; /* Reset margin */
+    margin-right: 40px;
+  }
+  
+  .box2 {
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    /* Add other styling or margin if needed */
+  }
+  
+
+  .box img{
+    width:350px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .box h2{
+    font-family: 'Europa', sans-serif; 
+    font-size: 12px;
+    font-weight: normal;
+    color:#6E6E6E;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .box h1{
+    font-family: 'Europa', sans-serif;
+    font-size: 14px; 
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+    width:350px;
+  }
+  .box p{
+    font-family:'Europa',sans-serif ;
+    font-size: 12px;
+    width:350px;
+    color: #6E6E6E;
+    margin-left: 20px;
+  }
+.view-post {
+    font-family: 'Europa', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+    border-bottom: 2px solid black; /* Thin black border line */
+    display: inline; /* Ensures the border spans only the width of the text */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+.box .images-container {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
+  }
+  .box .images-container img{
+    width:100px;
+    height: 70px;
+  }
+  .images-texts-container {
+    display: flex; /* Display images and texts side by side */
+    gap: 20px; /* Space between images and texts */
+    
+  }
+  .texts-container {
+    flex: 1; /* Allow the container to grow and take available space */
+    display: flex;
+    flex-direction: column; /* Stack texts vertically */
+    gap: 10px; /* Space between text elements */
+    margin-top: 10px;
+  }
+  .texts h2{
+    width: 150px;
+    font-family: 'Europa', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 35px;
+  }
+  .texts p{
+    width: 150px;
+    margin-bottom:20px;
+  }
+  .main-content {
+    flex: 1; /* This ensures that the main content takes up all available space */
+  }
+  .footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the footer */
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between social icons and text */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size of the footer text */
+  }
+  
+  .footer-icons-container {
+    display: flex; /* Align social icons horizontally */
+    gap: 15px; /* Space between icons */
+    justify-content: flex-end; /* Align icons to the right */
+   
+  }
+  
+  .footer-social-icon {
+    display: inline-block;
+    width: 20px; /* Size of the icons */
+    height: 20px; /* Maintain aspect ratio */
+    filter: brightness(0) invert(1); /* Change the color to white */
+  }
+  
+  .footer-social-icon img {
+    width: 100%; /* Ensure the image fits the container */
+    height:auto; /* Maintain aspect ratio */
+  }
+  
+  .footer-social-icon img:hover {
+    filter: brightness(0.9) invert(0.9); /* Optional: Adjust the color on hover */
+  }
+  
+  
+  .footer-social-icon img:hover {
+    filter: brightness(0) invert(1); /* Invert the icon color on hover (if needed) */
+  }
+  
